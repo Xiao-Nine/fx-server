@@ -2,7 +2,11 @@
 FROM golang:1.25-alpine AS builder
 
 # Set Go proxy to Aliyun mirror for faster downloads in China
+<<<<<<< HEAD
 ENV GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+=======
+ENV GOPROXY=GOPROXY=https://goproxy.cn,direct
+>>>>>>> e137bf6cd78d375e163387a5d3aa64cee4b64887
 # Install build dependencies for CGO/SQLite
 RUN apk add --no-cache gcc musl-dev sqlite-dev
 
