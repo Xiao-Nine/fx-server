@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  fx-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: fx-server:latest
+    container_name: fx-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - fx-data:/app/data
+    environment:
+      - MAX_FILE_SIZE=1048576000  # Max file size in bytes (default: 1000MB)
+    restart: unless-stopped
+
+volumes:
+  fx-data:
+    driver: local
