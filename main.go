@@ -4,7 +4,7 @@ import (
 	"crypto/rand"
 	"encoding/hex"
 
-	"fx-server/models"
+	"github.com/Xiao-Nine/fx-server/models"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/driver/sqlite"
